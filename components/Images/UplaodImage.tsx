@@ -29,7 +29,7 @@ const UploadImage: React.FC = () => {
         <>
             <input type="file" onChange={handleUploadImage} style={{ display: "none" }} ref={inputRef} />
             <h1 onClick={() => { inputRef.current?.click(); }}>Upload</h1>
-            <DisplayImage uploadedImage={uploadImage} colorPalette={colorPalette} />
+            {/* <DisplayImage uploadedImage={uploadImage} colorPalette={colorPalette} /> */}
         </>
     );
 };
