@@ -8,7 +8,7 @@ const Upload = () => {
         <div className="text-center ">
             <h1
                 className="text-4xl font-extrabold tracking-tight text-white/95 dark:text-slate-200 sm:text-5xl md:text-6xl">
-                <span className="block xl:inline"><span className="mb-1 block">ColorVista </span>
+                <span className="block xl:inline"><span className="mb-1 block">ColorVista: </span>
                 <span className="bg-gradient-to-r from-indigo-400 to-pink-600 bg-clip-text text-transparent">
                 Where Colors Come Alive.
                 </span>
