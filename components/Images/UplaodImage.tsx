@@ -1,3 +1,4 @@
+
 "use client"
 import React, { useState, useRef } from 'react';
 import ColorThief from 'colorthief';
@@ -15,7 +16,7 @@ const UploadImage: React.FC = () => {
         const img = new Image();
         img.onload = () => {
             const colorThief = new ColorThief();
-            const colors = colorThief.getPalette(img, 6);
+            const colors = colorThief.getPalette(img);
             const colorPalette = colors.map((color: number[]) => color.map(c => c.toString()));
             setUploadImage(URL.createObjectURL(file));
             setColorPalette(colorPalette);
@@ -29,7 +30,7 @@ const UploadImage: React.FC = () => {
         <>
             <input type="file" onChange={handleUploadImage} style={{ display: "none" }} ref={inputRef} />
             <h1 onClick={() => { inputRef.current?.click(); }}>Upload</h1>
-            {/* <DisplayImage uploadedImage={uploadImage} colorPalette={colorPalette} /> */}
+            <DisplayImage uploadedImage={uploadImage} colorPalette={colorPalette} />
         </>
     );
 };

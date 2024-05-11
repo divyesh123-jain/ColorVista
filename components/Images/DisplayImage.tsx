@@ -2,6 +2,7 @@
 import React from 'react';
 import Image from 'next/image';
 import Colors from '../colors';
+import Upload from '@/helpers/Upload';
 
 interface DisplayImageProps {
     uploadedImage: string | null;
@@ -16,39 +17,33 @@ const DisplayImage: React.FC<DisplayImageProps> = ({ uploadedImage, colorPalette
     };
 
     return (
-        <div className="flex flex-col items-center justify-center my-8 md:my-12">
-            <div>
+        <div className="flex flex-row  my-8 md:my-12">
+          
                 {uploadedImage ? (
+                      <div className='px-7 pt-20'>
                     <Image
                         src={uploadedImage}
                         alt="image"
-                        height={600}
-                        width={600}
-                        className="object-cover w-80 md:w-[600px] rounded-xl"
+                        height={200}
+                        width={200}
+                        className="object-cover w-80 md:w-[500px] rounded-xl"
                     />
-                ) : (
-                    <div className="flex flex-col gap-6 md:gap-10">
-                        <img
-                            src="/upload.svg"
-                            alt=""
-                            className="h-20 md:h-32 opacity-70 text-gray-800"
-                        />
-                        <p className="text-sm md:text-base text-gray-400 text-center">
-                            Please upload an image!
-                        </p>
-                    </div>
+            </div>   ) : (
+                  <Upload />
                 )}
-            </div>
+         
 
             {/* palette  */}
             {colorPalette && (
-                <ul className="flex flex-wrap gap-12 md:gap-14 justify-center mt-20">
-                    {colorPalette.map((color, index) => {
-                        const rgb = `rgb(${color.join(",")})`;
-                        const hex = `#${toHex(color[0])}${toHex(color[1])}${toHex(color[2])}`;
-                        return <Colors key={index} rgb={rgb} hex={hex} />;
-                    })}
-                </ul>
+                <div className='w-auto px-36'>
+               <ul className="grid grid-cols-4 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-14 justify-center mt-20">
+    {colorPalette.map((color, index) => {
+        const rgb = `rgb(${color.join(",")})`;
+        const hex = `#${toHex(color[0])}${toHex(color[1])}${toHex(color[2])}`;
+        return <Colors key={index} rgb={rgb} hex={hex} />;
+    })}
+</ul>
+                </div>
             )}
         </div>
     );
