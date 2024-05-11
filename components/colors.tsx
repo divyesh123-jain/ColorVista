@@ -35,7 +35,8 @@ const Colors: React.FC<ColorsProps> = ({ rgb, hex }) => {
                     ) : (
                         <FaRegClipboard
                             size={16}
-                            className="text-zinc-100"
+                            color='black'
+                            className=""
                             onClick={handleCopy}
                         />
                     )}

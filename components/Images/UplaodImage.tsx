@@ -1,8 +1,8 @@
-
 "use client"
 import React, { useState, useRef } from 'react';
 import ColorThief from 'colorthief';
 import DisplayImage from './DisplayImage';
+import Header from '../Header';
 
 const UploadImage: React.FC = () => {
     const [uploadImage, setUploadImage] = useState<string | null>(null);
@@ -29,7 +29,8 @@ const UploadImage: React.FC = () => {
     return (
         <>
             <input type="file" onChange={handleUploadImage} style={{ display: "none" }} ref={inputRef} />
-            <h1 onClick={() => { inputRef.current?.click(); }}>Upload</h1>
+            {/* Pass the handleUploadImage prop to the Header component */}
+            <Header handleChange={handleUploadImage} handleUploadImage={handleUploadImage} />
             <DisplayImage uploadedImage={uploadImage} colorPalette={colorPalette} />
         </>
     );
