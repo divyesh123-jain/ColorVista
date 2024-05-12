@@ -12,7 +12,7 @@ ColorVista is a web application that simplifies the process of generating color 
 
 ## Technologies Used
 
-- **Frontend:** React.js with TypeScript
+- **Frontend:** Nextjs with TypeScript
 - **Color Extraction:** ColorThief library
 - **Styling:** Tailwind CSS
 - **Deployment:** Deployed on Vercel
@@ -36,9 +36,10 @@ To run ColorVista locally, follow these steps:
 
 ## Demo
 
-You can try out ColorVista live at [colorvista-demo.vercel.app](https://colorvista-demo.vercel.app/).
+You can try out ColorVista live at [https://color-vista.vercel.app/].
 
-[![ColorVista Demo Video](https://img.youtube.com/vi/VIDEO_ID/maxresdefault.jpg)](https://www.youtube.com/watch?v=VIDEO_ID)
+
+[![ColorVista Demo Video]](https://i.imgur.com/bW1s2r9.mp4)
 
 ## Contributing
 
@@ -52,12 +53,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - ColorThief library for color extraction.
 - Tailwind CSS for styling.
-- React.js and TypeScript for frontend development.
+- Nextjs and TypeScript for frontend development.
 
-## Screenshots
 
-![Screenshot](screenshot.png)
 
----
-**Author:** Your Name  
-**GitHub:** [Your GitHub Profile](https://github.com/yourusername)
+
+
