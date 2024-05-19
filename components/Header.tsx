@@ -1,5 +1,6 @@
-import React from "react";
 
+import React from "react";
+import ThemeSwitcher from "./Theme/ThemeSwitcher";
 
 import { ChangeEvent } from "react";
 
@@ -15,7 +16,7 @@ const Header: React.FC<HeaderProps> = ({ handleChange , handleUploadImage }) => 
  
         <div className="flex items-center gap-1 cursor-pointer">
        
-          <h2 className="text-md md:text-2xl text-white">ColorVista
+          <h2 className="text-md md:text-2xl block font-bold dark:text-zinc-100 ">ColorVista
 </h2>
         </div>
 
@@ -29,8 +30,9 @@ const Header: React.FC<HeaderProps> = ({ handleChange , handleUploadImage }) => 
             </label>
             <input type="file" id="file" hidden onChange={handleChange} />
           </div>
-        
+          <ThemeSwitcher />
         </div>
+
       </div>
     </header>
   );

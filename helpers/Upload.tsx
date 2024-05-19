@@ -7,13 +7,13 @@ const Upload = () => {
     <div className="mx-auto mt-10 flex justify-center px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8">
         <div className="text-center ">
             <h1
-                className="text-4xl font-extrabold tracking-tight text-white/95 dark:text-slate-200 sm:text-5xl md:text-6xl">
+                className="text-4xl font-extrabold tracking-tight  dark:text-white/95 sm:text-5xl md:text-6xl">
                 <span className="block xl:inline"><span className="mb-1 block">ColorVista: </span>
                 <span className="bg-gradient-to-r from-indigo-400 to-pink-600 bg-clip-text text-transparent">
                 Where Colors Come Alive.
                 </span>
                 </span>
-                <div className="mt-2">Dive into a World of Creativity, 
+                <div className="mt-2  dark:text-white/95">Dive into a World of Creativity, 
                     <span className="relative mt-3 whitespace-nowrap text-blue-600"><svg aria-hidden="true" viewBox="0 0 418 42"
                         className="absolute top-3/4 left-0 right-0 m-auto h-[0.58em] w-fit fill-pink-400/50"
                         preserveAspectRatio="none">

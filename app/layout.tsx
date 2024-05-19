@@ -17,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className='bg-[#141417]' >
+      <body className='{`${inter.className} dark:bg-[#141417]`}' >
         
         <ThemeProvider>{children}</ThemeProvider>
         </body>
