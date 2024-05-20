@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+"use client"
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { FaRegClipboard, FaTimesCircle, FaCopy } from 'react-icons/fa';
 import { Gradient } from 'smooth-gradient';
@@ -14,6 +15,11 @@ const DisplayImage: React.FC<DisplayImageProps> = ({ uploadedImage, colorPalette
   const [gradientColors, setGradientColors] = useState<string[]>([]);
   const [copiedHex, setCopiedHex] = useState<string>('');
   const [copiedGradientColor, setCopiedGradientColor] = useState<string>('');
+
+  useEffect(() => {
+    // Reset gradientColors when uploadedImage changes
+    setGradientColors([]);
+  }, [uploadedImage]);
 
   const toHex = (rgb: string) => {
     let hex = Number(rgb).toString(16);
