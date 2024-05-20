@@ -17,7 +17,8 @@ const DisplayImage: React.FC<DisplayImageProps> = ({ uploadedImage, colorPalette
   const [copiedGradientColor, setCopiedGradientColor] = useState<string>('');
 
   useEffect(() => {
-    // Reset gradientColors when uploadedImage changes
+    // Reset selectedColors and gradientColors when uploadedImage changes
+    setSelectedColors([]);
     setGradientColors([]);
   }, [uploadedImage]);
 
