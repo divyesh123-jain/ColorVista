@@ -11,6 +11,7 @@
   "dependencies": {
     "@nextui-org/react": "^2.3.6",
     "@types/get-image-colors": "^4.0.5",
+    "@vercel/analytics": "^1.2.2",
     "colorthief": "^2.4.0",
     "framer-motion": "^11.1.9",
     "fs": "^0.0.1-security",
@@ -19,7 +20,8 @@
     "next-themes": "^0.3.0",
     "react": "^18",
     "react-dom": "^18",
-    "react-icons": "^5.2.1"
+    "react-icons": "^5.2.1",
+    "smooth-gradient": "^2.4.3"
   },
   "devDependencies": {
     "@types/node": "^20",
